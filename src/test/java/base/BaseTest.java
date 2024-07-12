@@ -143,15 +143,15 @@ public class BaseTest {
 
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
-            capabilities.setCapability("key", "testinium:0f8553472fedc6291c66ca8c58572509");
-            //capabilities.setCapability("key", System.getenv("key"));
+            //capabilities.setCapability("key", "testinium:0f8553472fedc6291c66ca8c58572509");
+            capabilities.setCapability("key", System.getenv("key"));
 
             browserChrome = System.getenv("browser");
 
            // driver = new RemoteWebDriver(new URL("https://hubclouddev.testinium.com/wd/hub"), capabilities);
            // driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
-            driver = new RemoteWebDriver(new URL("http://172.25.1.25:4444/wd/hub"), capabilities);
-           // driver = new RemoteWebDriver(new URL("http://host.docker.internal:4444/wd/hub"), capabilities);
+           // driver = new RemoteWebDriver(new URL("http://172.25.1.25:4444/wd/hub"), capabilities);
+            driver = new RemoteWebDriver(new URL("http://host.docker.internal:4444/wd/hub"), capabilities);
 
         }
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
