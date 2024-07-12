@@ -143,7 +143,8 @@ public class BaseTest {
 
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 
-            capabilities.setCapability("key", "testinium:0f8553472fedc6291c66ca8c58572509");
+            //capabilities.setCapability("key", "testinium:0f8553472fedc6291c66ca8c58572509");
+            capabilities.setCapability("key", System.getenv("key"));
 
             browserChrome = System.getenv("browser");
 
