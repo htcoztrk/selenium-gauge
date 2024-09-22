@@ -28,8 +28,6 @@ Tags: y_u_y[
 Tags: [_yu__y
 * Ebubekir yazdi bunu
 * ilk test stepi
-* Ebubekir yazdi bunu
-
 
  yeniscenario4
 -------------
@@ -45,8 +43,6 @@ Tags: _y[u]_y
 
 Tags: Silgi_
 * Silgi
-* Ebubekir yazdi bunu
-* ilk test stepi
 * Ebubekir yazdi bunu
 
 
