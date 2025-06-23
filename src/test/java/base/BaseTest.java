@@ -61,7 +61,7 @@ public class BaseTest {
             String content = Files.readString(path, StandardCharsets.UTF_8);
             logger.info("Script content:\n" + content);
 
-            String newLine = "\necho \"Script executed at $(date)\"";
+            String newLine = "\necho \"Yeni satir eklendi.\"";
 
             Files.write(path, newLine.getBytes(StandardCharsets.UTF_8), StandardOpenOption.APPEND);
 
