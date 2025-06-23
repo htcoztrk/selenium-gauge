@@ -24,7 +24,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -53,12 +55,19 @@ public class BaseTest {
         String selectBrowser = "chrome";
 
         String deneme = "/Users/testinium/Desktop/hatice/dockerengineservice/create_containers.sh";
+        Path path = Paths.get(deneme);
 
         try {
-            String content = readString(Paths.get(deneme), StandardCharsets.UTF_8);
+            String content = Files.readString(path, StandardCharsets.UTF_8);
             logger.info("Script content:\n" + content);
+
+            String newLine = "\necho \"Script executed at $(date)\"";
+
+            Files.write(path, newLine.getBytes(StandardCharsets.UTF_8), StandardOpenOption.APPEND);
+
+            logger.info("Yeni satır dosyaya eklendi.");
         } catch (IOException e) {
-            logger.error("Failed to read the script file at path: " + deneme, e);
+            logger.error("Failed to process the script file at path: " + deneme, e);
         }
         logger.info("************************************  BeforeScenario  ************************************");
         logger.info("************************************key   " + System.getProperty("key") + "   key************************************");
