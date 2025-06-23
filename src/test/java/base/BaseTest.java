@@ -134,7 +134,7 @@ public class BaseTest {
         }
 
         else {
-            logger.info("************************************   Testiniumda test ayağa kalkacak   ************************************");
+            logger.info("************************************   Testiniumda test ayağa kalkacak haticee  ************************************");
             String deneme2 = "/Users/testinium/Desktop/hatice/dockerengineservice/create_containers.sh"
         try {
             String content = Files.readString(Paths.get(deneme2), StandardCharsets.UTF_8);
