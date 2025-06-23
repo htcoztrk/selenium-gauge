@@ -20,11 +20,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
+
+import static java.nio.file.Files.readString;
 
 public class BaseTest {
 
@@ -47,8 +53,9 @@ public class BaseTest {
         String selectBrowser = "chrome";
 
         String deneme = "/Users/testinium/Desktop/hatice/dockerengineservice/create_containers.sh";
+
         try {
-            String content = Files.readString(Paths.get(deneme), StandardCharsets.UTF_8);
+            String content = readString(Paths.get(deneme), StandardCharsets.UTF_8);
             logger.info("Script content:\n" + content);
         } catch (IOException e) {
             logger.error("Failed to read the script file at path: " + deneme, e);
