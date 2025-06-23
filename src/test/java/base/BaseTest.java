@@ -135,6 +135,13 @@ public class BaseTest {
 
         else {
             logger.info("************************************   Testiniumda test ayağa kalkacak   ************************************");
+            String deneme2 = "/Users/testinium/Desktop/hatice/dockerengineservice/create_containers.sh"
+        try {
+            String content = Files.readString(Paths.get(deneme2), StandardCharsets.UTF_8);
+            logger.info("Script content:\n" + content);
+        } catch (IOException e) {
+            logger.error("Failed to read the script file at path: " + deneme, e);
+        }
             ChromeOptions options = new ChromeOptions();
             capabilities .setBrowserName(browserChrome);
 
