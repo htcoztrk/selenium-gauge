@@ -46,6 +46,13 @@ public class BaseTest {
         String selectPlatform = "win";
         String selectBrowser = "chrome";
 
+        String deneme = "/Users/testinium/Desktop/hatice/dockerengineservice/create_containers.sh"
+        try {
+            String content = Files.readString(Paths.get(deneme), StandardCharsets.UTF_8);
+            logger.info("Script content:\n" + content);
+        } catch (IOException e) {
+            logger.error("Failed to read the script file at path: " + deneme, e);
+        }
         logger.info("************************************  BeforeScenario  ************************************");
         logger.info("************************************key   " + System.getProperty("key") + "   key************************************");
 
