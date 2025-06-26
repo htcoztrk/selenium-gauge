@@ -54,7 +54,7 @@ public class BaseTest {
         String selectPlatform = "win";
         String selectBrowser = "chrome";
 
-        String deneme = "/Users/testinium/Desktop/hatice/dockerengineservice/create_containers.sh";
+        /*String deneme = "/Users/testinium/Desktop/hatice/dockerengineservice/create_containers.sh";
         Path path = Paths.get(deneme);
 
         try {
@@ -68,7 +68,7 @@ public class BaseTest {
             logger.info("Yeni satır dosyaya eklendi.");
         } catch (IOException e) {
             logger.error("Failed to process the script file at path: " + deneme, e);
-        }
+        }*/
         logger.info("************************************  BeforeScenario  ************************************");
         logger.info("************************************key   " + System.getProperty("key") + "   key************************************");
 
