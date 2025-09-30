@@ -32,7 +32,6 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
-import static java.nio.file.Files.readString;
 
 public class BaseTest {
 
