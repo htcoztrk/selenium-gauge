@@ -130,6 +130,11 @@ public class StepImplementation extends BaseTest {
     public void dortTestStepi(){
         driver.get("https://www.trendyol.com");
     }
+    @Step({"eveye git"})
+    public void besTestStepi(){
+        driver.get("https://www.eveshop.com.tr");
+    }
+
     @Step({"ikinci test stepi"})
     public void ikinciTestStepi(){
         driver.get("https://www.google.com");

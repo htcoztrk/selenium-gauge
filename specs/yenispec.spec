@@ -52,3 +52,10 @@ Tags: trendyol
 Tags: amazon
 * amazona git
 * Wait "3" seconds
+
+ eveshop
+-------------
+
+Tags: eveshop
+* eveye git
+* Wait "1" seconds
