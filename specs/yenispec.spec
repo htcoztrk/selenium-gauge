@@ -44,9 +44,11 @@ Tags: Silgi_
 
 Tags: github
 * Githuba git
+* Wait "3" seconds
 
  amazon
 -------------
 
 Tags: amazon
 * amazona git
+* Wait "3" seconds
