@@ -39,6 +39,13 @@ Tags: Silgi_
 * Silgi
 * Ebubekir yazdi bunu
 
+ amazon
+-------------
+
+Tags: amazon
+* amazona git
+* Wait "3" seconds
+
  trendyol
 -------------
 
@@ -46,12 +53,7 @@ Tags: trendyol
 * trendyol git
 * Wait "3" seconds
 
- amazon
--------------
 
-Tags: amazon
-* amazona git
-* Wait "3" seconds
 
  eveshop
 -------------
