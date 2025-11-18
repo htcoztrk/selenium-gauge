@@ -39,11 +39,11 @@ Tags: Silgi_
 * Silgi
 * Ebubekir yazdi bunu
 
- Github
+ trendyol
 -------------
 
-Tags: github
-* Githuba git
+Tags: trendyol
+* trendyol git
 * Wait "3" seconds
 
  amazon

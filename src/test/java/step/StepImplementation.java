@@ -126,6 +126,10 @@ public class StepImplementation extends BaseTest {
         driver.get("https://www.amazon.com.tr");
     }
 
+    @Step({"trendyol git"})
+    public void dortTestStepi(){
+        driver.get("https://www.trendyol.com");
+    }
     @Step({"ikinci test stepi"})
     public void ikinciTestStepi(){
         driver.get("https://www.google.com");
