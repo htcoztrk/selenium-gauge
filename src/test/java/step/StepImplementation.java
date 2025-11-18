@@ -116,7 +116,7 @@ public class StepImplementation extends BaseTest {
         driver.get("https://www.google.com");
     }
 
-    @Step({"githuba git"})
+    @Step({"Githuba git"})
     public void ilkTestStepi(){
        driver.get("https://github.com/htcoztrk");
     }
