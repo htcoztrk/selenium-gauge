@@ -116,10 +116,16 @@ public class StepImplementation extends BaseTest {
         driver.get("https://www.google.com");
     }
 
-    @Step({"ilk test stepi"})
+    @Step({"githuba git"})
     public void ilkTestStepi(){
        driver.get("https://github.com/htcoztrk");
     }
+
+    @Step({"amazona git"})
+    public void ucTestStepi(){
+        driver.get("https://www.amazon.com.tr");
+    }
+
     @Step({"ikinci test stepi"})
     public void ikinciTestStepi(){
         driver.get("https://www.google.com");
