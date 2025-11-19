@@ -135,6 +135,15 @@ public class StepImplementation extends BaseTest {
         driver.get("https://www.eveshop.com.tr");
     }
 
+    @Step({"nonbir git"})
+    public void nonbirbesTestStepi(){
+        driver.get("https://www.n11.com");
+    }
+    @Step({"vatanbilgisayar git"})
+    public void vatanbesTestStepi(){
+        driver.get("https://www.vatanbilgisayar.com");
+    }
+
     @Step({"ikinci test stepi"})
     public void ikinciTestStepi(){
         driver.get("https://www.google.com");
