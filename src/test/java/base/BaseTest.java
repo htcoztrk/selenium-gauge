@@ -142,7 +142,13 @@ public class BaseTest {
             capabilities .setBrowserName(browserChrome);
 
             String scenarioName = context.getCurrentScenario().getName();
-            String scenarioTags = context.getCurrentScenario().getTags().getFirst();
+
+            String scenarioTags = null;
+            if(context.getCurrentScenario().getTags() != null && !context.getCurrentScenario().getTags().isEmpty()) {
+                scenarioTags = String.join(",", context.getCurrentScenario().getTags());
+            } else {
+                scenarioTags = "noTag";
+            }
             logger.info("Gauge Scenario: " + scenarioName);
             logger.info("Gauge Tags: " + scenarioTags);
             capabilities.setCapability("scenarioName", scenarioName);
