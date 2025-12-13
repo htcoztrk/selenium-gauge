@@ -2,6 +2,7 @@ package base;
 
 import com.thoughtworks.gauge.AfterScenario;
 import com.thoughtworks.gauge.BeforeScenario;
+import com.thoughtworks.gauge.Scenario;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
 
@@ -47,7 +48,7 @@ public class BaseTest {
     // bu kısım her senaryodan önce tekrar çalışır.
     //deneme değişikliği
     @BeforeScenario
-    public void setUp() throws Exception {
+    public void setUp(Scenario scenario) throws Exception {
 
         String baseUrl = "https://www.hepsiburada.com/";
         String selectPlatform = "win";
@@ -63,6 +64,8 @@ public class BaseTest {
                 if ("chrome".equalsIgnoreCase(selectBrowser)){
                     ChromeOptions options = new ChromeOptions();
                     capabilities .setCapability("browserName",browserChrome);
+                    capabilities.setCapability("scenarioName", scenario.getName());
+                    capabilities.setCapability("tag", scenario.getTags().getFirst());
                     DesiredCapabilities capabilities = new DesiredCapabilities();
                     LoggingPreferences loggingPreferences = new LoggingPreferences();
                     loggingPreferences.enable(LogType.BROWSER, Level.ALL);
