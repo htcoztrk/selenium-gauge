@@ -64,8 +64,10 @@ public class BaseTest {
                 if ("chrome".equalsIgnoreCase(selectBrowser)){
                     ChromeOptions options = new ChromeOptions();
                     capabilities .setCapability("browserName",browserChrome);
+                    logger.info("Senaryo Name: " + scenario.getName());
                     capabilities.setCapability("scenarioName", scenario.getName());
-                    capabilities.setCapability("tag", scenario.getTags().getFirst());
+                    logger.info("Senaryo Tags: " + scenario.getTags());
+                    capabilities.setCapability("tag", scenario.getTags());
                     DesiredCapabilities capabilities = new DesiredCapabilities();
                     LoggingPreferences loggingPreferences = new LoggingPreferences();
                     loggingPreferences.enable(LogType.BROWSER, Level.ALL);
