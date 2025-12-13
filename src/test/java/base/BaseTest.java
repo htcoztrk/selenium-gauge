@@ -4,6 +4,7 @@ import com.thoughtworks.gauge.AfterScenario;
 import com.thoughtworks.gauge.BeforeScenario;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
+import com.thoughtworks.gauge.ExecutionContext;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -47,7 +48,7 @@ public class BaseTest {
     // bu kısım her senaryodan önce tekrar çalışır.
     //deneme değişikliği
     @BeforeScenario
-    public void setUp() throws Exception {
+    public void setUp(ExecutionContext context) throws Exception {
 
         String baseUrl = "https://www.hepsiburada.com/";
         String selectPlatform = "win";
@@ -140,10 +141,12 @@ public class BaseTest {
             ChromeOptions options = new ChromeOptions();
             capabilities .setBrowserName(browserChrome);
 
-            /*logger.info("Senaryo Name: " + scenario.getName());
-            capabilities.setCapability("scenarioName", scenario.getName());
-            logger.info("Senaryo Tags: " + scenario.getTags());
-            capabilities.setCapability("tag", scenario.getTags());*/
+            String scenarioName = context.getCurrentScenario().getName();
+            String scenarioTags = context.getCurrentScenario().getTags().toString();
+            logger.info("Gauge Scenario: " + scenarioName);
+            logger.info("Gauge Tags: " + scenarioTags);
+            capabilities.setCapability("scenarioName", scenarioName);
+            capabilities.setCapability("scenarioTag", scenarioTags);
 
             options.addArguments("disable-translate");
 
