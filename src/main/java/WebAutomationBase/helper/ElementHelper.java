@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 public class ElementHelper
 {
-sfvsdvd
+
     public static By getElementInfoToBy(ElementInfo elementInfo) {
         By by = null;
         if (elementInfo.getType().equals("css")) {
